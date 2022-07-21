@@ -19,6 +19,10 @@ export class AuthService {
     return this.http.post(`${api}/auth/login`, body);
   }
 
+  loginWith(provider: any) {
+    return this.http.get(`${api}/auth/${provider}`);
+  }
+
   users() {
     return this.http.get(`${api}/users`);
   }
